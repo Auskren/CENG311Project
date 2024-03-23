@@ -1,0 +1,265 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url("../images/backgrounds/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100vh; /* Tarayıcı penceresinin tam yüksekliğini kaplasın */
+}
+
+#navbar {
+  background: none; /* Arka planı kaldır */
+  color: white;
+  padding: 10px 0;
+  position: fixed; /* Sabit pozisyon */
+  left: 0; /* Sol kenara yapışık */
+  top: 0; /* Üst kenardan itibaren */
+  bottom: 0; /* Alt kenara kadar uzanır */
+  width: 20%;
+  overflow: auto; /* İçerik çok fazlaysa kaydırmaya izin ver */
+  display: flex;
+  flex-direction: column; /* İçerikleri dikey olarak hizala */
+  justify-content: center; /* İçerikleri dikey olarak ortala */
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Liste öğelerini dikey olarak hizala */
+}
+
+#navbar li a {
+  display: block;
+  color: white; /* Daha canlı bir yazı rengi */
+  text-decoration: none;
+  padding: 10px 20px;
+  text-shadow: 1px 1px 2px black; /* Yazıların okunabilirliğini artır */
+  font-size: 20px; /* Yazı boyutunu büyüt */
+}
+
+#navbar li a:hover {
+  background: rgba(
+    197,
+    228,
+    242,
+    0.9
+  ); /* Hover durumunda arka planı hafif saydam yap */
+  border-radius: 5px; /* Kenarları yuvarlaklaştır */
+}
+
+/* ... Diğer stil tanımları ... */
+
+#header {
+  padding: 60px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px #000; /* Text shadow for better readability */
+
+  margin-bottom: 1px;
+}
+
+#header h1 {
+  font-size: 2em;
+}
+
+#header p {
+  text-shadow: 1px 1px 3px #000; /* Text shadow for better readability */
+}
+
+.buttons button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #000; /* Box shadow for better visibility */
+}
+
+/* Responsive adjustments, etc. */
+
+.contact-form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: none; /* Hafif saydam beyaz arka plan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px); /* Arkadaki görüntüyü hafif bulanıklaştır */
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdd3d5;
+  border-radius: 5px;
+  box-sizing: border-box; /* Padding ve border dahil olmak üzere toplam genişlik */
+  background: rgba(251, 251, 251, 0.9); /* İç alanlar hafif saydam */
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #0fdd79;
+
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Mesaj alanından sonra biraz boşluk bırak */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  margin-top: -20px; /* Üst boşluğu azaltarak container'ları yukarı çeker */
+  /* Diğer stiller sabit kalabilir */
+}
+
+.team-member {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Şeffaflık ekleyerek arka plana hafif bir görünürlük sağlar */
+  border-radius: 10px;
+  width: 300px; /* ya da ihtiyaca göre ayarlayın */
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(
+    -10px
+  ); /* Fare ile üzerine gelindiğinde hafif bir kaldırma efekti */
+}
+
+.team-photo {
+  width: 100%; /* Resmi container genişliğine sığdır */
+  border-radius: 50%; /* Daire şeklinde bir fotoğraf */
+  margin-bottom: 10px;
+}
+
+h3 {
+  text-align: center; /* Başlık metnini ortala */
+  margin-bottom: 5px;
+}
+
+.title {
+  text-align: center; /* Ünvan metnini ortala */
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 14px; /* Açıklama metninin boyutunu ayarla */
+  margin-bottom: 15px;
+}
+
+/* Burada sosyal medya ikonları için ek CSS tanımları olacak */
+
+/* ...önceki CSS kodları... */
+
+.social-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-links img {
+  width: 24px; /* ya da ihtiyacınıza göre ayarlayın */
+  height: auto;
+}
+
+/* ...devamı... */
+
+/* ...diğer CSS kodları... */
+
+.post-list {
+  margin: 30px auto;
+  width: 60%;
+}
+
+.post {
+  background: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: 480px;
+  display: block;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.post-excerpt {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.homepage-content{
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  color: #fff;
+  padding: 0% 20%;
+  font-size: 17px;
+}
+
+/* ...responsive ve diğer stil tanımları... */
