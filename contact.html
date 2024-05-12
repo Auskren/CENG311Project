@@ -4,45 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Modern Design</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" 
+          href="css/styles.css" />
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" 
+          href="lib/jquery-ui-1.13.3-2.custom/jquery-ui.min.css" />
+          
+    <!-- Poppa plugin Stylesheets-->
+    <link rel="stylesheet" type="text/css" 
+          href="/css/poppa/validation.css"> 
+    <link rel="stylesheet" type="text/css"
+          href="7css/poppa/global.css"> 
+    <link rel="stylesheet" type="text/css" 
+          href="/css/poppa/github.css"> 
   </head>
+
   <body>
-    <nav id="navbar">
-      <!-- Aynı navigasyon çubuğu -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-      </ul>
-    </nav>
+    
 
     <header id="header">
       <h1>Welcome to Our Contact</h1>
     </header>
 
-    <!-- İletişim formu buraya ekleniyor -->
     <div class="contact-form-container">
-      <form id="contact-form" action="submit_form.php" method="POST">
+      <form id="contactUs-form" class="contact-form" onsubmit="showreq()"> 
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" 
+              id="name" 
+              placeholder="John Doe" 
+              name="name" 
+              data-validation-range="max:60"  
+              data-validation-type="letters" 
+              required />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" 
+          id="email" 
+          placeholder="UltimateJoe@joemail.com" 
+          name="email" 
+          data-validation-range="max:90" 
+          data-validation-type="email"
+          required />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea type="text" 
+          id="message" 
+          placeholder="Thank you for your feedback!" 
+          name="message"
+          data-validation-range="max:1000" 
+          rows="4" 
+          required>
+          </textarea>
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="text" id="date" name="date" required />
         </div>
         <button type="submit">Send Message</button>
       </form>
     </div>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Plugins -->
+    <script src="lib/jquery-ui-1.13.3-2.custom/jquery-ui.min.js"></script>
+    <script src="lib/Poppa/js/poppa.js"></script> 
+    <!-- Custom JavaScript -->
+    <script src="js/print-script.js"></script>
+    <script src="js/contact-form.js"></script>
+  
     <footer>
-      <!-- Footer içeriği -->
-    </footer>
+  </footer>
   </body>
+    
 </html>
