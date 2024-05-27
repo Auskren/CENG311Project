@@ -24,7 +24,7 @@ function fetchBlogs(page, path) {
   const host = window.location.hostname;
   const port = location.port
   console.log("page: ", page)
-  const url = `https://${host}:${port}/content/${path}/${path}${page}.json`;
+  const url = `https://${host}:${port}/CENG311Project/content/${path}/${path}${page}.json`;
 
   $.ajax({
       url: url,
