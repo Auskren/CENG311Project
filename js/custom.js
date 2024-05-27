@@ -71,7 +71,19 @@ function pageDown(page,path){
   fetchBlogs(page,path)
   return page
 }
-
+function fetchRandomDogPicture() {
+  $.ajax({
+    url: 'https://dog.ceo/api/breeds/image/random',
+    method: 'GET',
+    success: function(data) {
+      console.log(data.message)
+      $('#dog-img').attr('src', data.message);
+    },
+    error: function(error) {
+      console.log('Error fetching dog picture:', error);
+    }
+  });
+}
 
 
 
@@ -102,19 +114,7 @@ $(document).ready(function () {
         'tooltips': ['Home', 'Blog', 'Projects', 'Contact', 'About Us'] // Tooltips for navigation items
     }
   });  
-  function fetchRandomDogPicture() {
-    $.ajax({
-      url: 'https://dog.ceo/api/breeds/image/random',
-      method: 'GET',
-      success: function(data) {
-        console.log(data.message)
-        $('#dog-img').attr('src', data.message);
-      },
-      error: function(error) {
-        console.log('Error fetching dog picture:', error);
-      }
-    });
-  }
+  
   // Fetch Dog picture
   fetchRandomDogPicture();
 
