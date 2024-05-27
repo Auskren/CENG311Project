@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog - Modern Design</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" 
+  href="lib/jquery-ui-1.13.3-2.custom/jquery-ui.min.css" />
 </head>
 
 <body>
@@ -15,39 +18,19 @@
   </header>
   <!-- Blog sayfasına özel içerikler burada yer alacak -->
   <div class="post-list">
-    <!-- Tek bir blog postu örneği -->
-    <div class="post">
-      <img src="images/example.jpg" alt="Post Title 1" class="post-image" />
-      <div class="post-content">
-        <h2 class="post-title">Project 1</h2>
-        <p class="post-date">January 1, 2024</p>
-        <p class="post-excerpt">
-          Short Description of the project.
-        </p>
-        <!-- Daha fazla detaylar için diğer etiketler eklenebilir -->
-      </div>
-    </div>
-    <div class="post">
-      <img src="images/example.jpg" alt="Post Title 1" class="post-image" />
-      <div class="post-content">
-        <h2 class="post-title">Project 2</h2>
-        <p class="post-date">October 1, 2022</p>
-        <p class="post-excerpt">
-          Short Description of the project.
-        </p>
-      </div>
-    </div>
-    <div class="post">
-      <img src="images/example.jpg" alt="Post Title 1" class="post-image" />
-      <div class="post-content">
-        <h2 class="post-title">Project 3</h2>
-        <p class="post-date">January 1, 2024</p>
-        <p class="post-excerpt">
-          Short Description of the project.
-        </p>
-      </div>
-    </div>
+    
   </div>
+  <button id="load-more" style="position: absolute;left: 40%;" onclick="page=pageDown(page,'blogs')">Previous Page</button>
+  <button id="load-more" style="position: absolute;left: 60%;" onclick="page=pageUp(page,'blogs')">Next Page</button>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/custom.js"></script>
+  <script>fetchBlogs(1,'projects')</script>
+  
+  </script>
   <footer>
     <!-- Footer içeriği -->
   </footer>

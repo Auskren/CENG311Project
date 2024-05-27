@@ -1,0 +1,10 @@
+{
+    "posts": [
+        { "id": 13, "title": "Blog 13", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 1" },
+        { "id": 14, "title": "Blog 14", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 2" },
+        { "id": 15, "title": "Blog 15", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 3" },
+        { "id": 16, "title": "Blog 16", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 4" },
+        { "id": 17, "title": "Blog 17", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 5" },
+        { "id": 18, "title": "Blog 18", "date":"January 1, 2024", "photo": "images/example.jpg", "excerpt": "Excerpt of blog 6" }
+    ]
+}

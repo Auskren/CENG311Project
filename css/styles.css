@@ -122,7 +122,7 @@ html {
   background: rgba(251, 251, 251, 0.9); /* İç alanlar hafif saydam */
 }
 
-button[type="submit"] {
+button {
   padding: 10px 15px;
   background-color: #0fdd79;
 
@@ -220,6 +220,8 @@ h3 {
 
 .post-list {
   margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
   width: 60%;
 }
 
